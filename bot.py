@@ -93,8 +93,7 @@ async def on_member_remove(member):
         await channel.send(embed=embed)
 
 @bot.command(name='cooldown',hidden=True)
-@commands.is_owner()
-@commands.is_administrator()
+@commands.check_any(commands.is_owner(), commands.has_permissions(administrator=True))
 async def cooldown(ctx, user, time_in):
     time_converter = {'s':1,'m':60,'h':3600}
     if time_in[-1] in time_converter:
