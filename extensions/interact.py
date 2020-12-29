@@ -162,6 +162,7 @@ class Interact(commands.Cog):
                     brief='React to a message.',
                     help='This command can be used to react to the previously sent message using any emoji.',
                     usage='emoji_name1[, emoji_name2[, ...]]')
+    @commands.check_any(commands.is_owner(), commands.has_permissions(administrator=True))
     async def react(self, ctx, *reactions):
         await ctx.message.delete()
         messages = await ctx.channel.history(limit=2).flatten()
