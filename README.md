@@ -75,7 +75,3 @@ WALL-E has a plethora of features, including, but not limited to:
 - [EXPERIMENTAL] A command that overlays an emoji over faces in a picture (Requires openCV and NumPy).
 
 You can also create folders called "gifs" or "images" in the bot's root directory and place GIFs and images, respectively, in them. Then you can use the picture/GIF's name as a command that will send it as a message.
-
-Another optional feature is an anti hate speech filter, that will delete any messages containing one or more words from a list of words. To enable it, simply create a "bad_words.txt" file in the bot's root directory and add the words you want to ban in your server, one per line. The detector takes spaces and other special characters into account, so if you ban the word "avocado" and someone types "av oc.a-do", it will get flagged by the filter.
-
-
